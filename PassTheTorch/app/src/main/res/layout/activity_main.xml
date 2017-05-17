@@ -1,0 +1,85 @@
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MainActivity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@android:color/black">
+    <ImageView
+        android:id="@+id/torchImg"
+        android:layout_width="220dp"
+        android:width="220dp"
+        android:layout_height="300dp"
+        android:layout_gravity="center"
+        android:paddingTop="20dp"
+        android:src="@drawable/emptyhanded"/>
+
+
+
+    <LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_below="@+id/torchImg"
+        android:gravity="center">
+        <Button
+            android:id="@+id/buttonAddTorch"
+            android:layout_width="100dp"
+            android:layout_height="60dp"
+            android:layout_centerHorizontal="true"
+            android:text="Add Torch"
+            />
+        <Button
+            android:id="@+id/discardTorch"
+            android:layout_width="100dp"
+            android:layout_height="60dp"
+            android:layout_below="@+id/hasTorch"
+            android:layout_centerHorizontal="true"
+            android:text="Discard Torch" />
+        <Button
+            android:id="@+id/devOptions"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_below="@+id/hasTorch"
+            android:layout_centerHorizontal="true"
+            android:text="\?"
+            android:textSize="30dp"/>
+    </LinearLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/buttonPrepTorch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true" />
+        <TextView
+            android:id="@+id/hasTorch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/buttonPrepTorch"
+            android:textColor="@android:color/white"/>
+
+        <TextView
+            android:id="@+id/txtMessagesReceived"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/hasTorch"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:textColor="@android:color/white"/>
+
+
+        <TextView
+            android:id="@+id/txtMessageToSend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/txtMessagesReceived"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:textColor="@android:color/white"/>
+
+    </RelativeLayout>
+</LinearLayout>
